@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+    function hero (health, mana, stamina){
+        this.health = 100;
+        this.mana = 50;
+        this.stamina = 75;
+        this.details = function(){
+            return `Health: ${this.health}, 
+            Mana: ${this.mana}, 
+            Stamina: ${this.stamina}`;
+        }
+        this.attack = function(enemy){
+            this.stamina -= 10;
+            this.health -= 20;
+            return `After attack - ${enemy.health}:Hero stamina: ${this.stamina}`;
+        }
+    }
+
+    function weapon(damage, durability){
+        this.damage = 25;
+        this.durability = 100;
+    }
+
+    console.log("Creation of Heroes");
+    const Melissa = new hero();
+    const pacito = new hero();
+
+    console.log("Melissa:", Melissa);
+    console.log("pacito:", pacito);
+
+    console.log("Updating Hero Properties");
+    Melissa.health = 50;
+    console.log("Melissa's health:", Melissa.health);
+
+    pacito.health = 10;
+    console.log("pacito's health:", pacito.health);
+
+    Melissa.armor = 15;
+    console.log("Create new properties for heroes");
+    console.log("Melissa's armor:", Melissa.armor);
+
+    pacito.range = 5; 
+    console.log("pacito's range:", pacito.range);
+
+    console.log("Deleting Hero Properties");
+    delete Melissa.armor;
+    console.log("Melissa after deleting armor:", Melissa);
+
+    console.log("Creation nested objects");
+    console.log("Adding weapon to heroes");
+
+    const sword = new weapon();
+    const bow = new weapon();
+
+    Melissa.weapon = sword;
+    pacito.weapon = bow;
+
+    console.log("Melissa's weapon:", Melissa.weapon);
+    console.log("pacito's weapon:", pacito.weapon);
+
+    console.log("Melissa Details:", Melissa.details());
+    console.log("pacito Details:", pacito.details());
+
+    Melissa.rage = function(){
+        this.health += 20;
+        this.stamina += 10;
+        return `After rage -
+        health: ${this.health},
+        stamina: ${this.stamina}`;
+    };
+
+    console.log("Melissa uses rage:", Melissa.rage());
+    console.log("Melissa Details:", Melissa.details());
+    pacito.headShot = function() {
+        this.mana -= 15;
+        this.accuracy += 2;
+        return `After headShot -
+        mana: ${this.mana},
+        accuracy: ${this.accuracy}`;
+    }
+    console.log("Melissa attacks pacito:", Melissa.attack(pacito));
+    console.log("pacito uses headShot:", pacito.headShot());
+</script>
+</body>
+</html>

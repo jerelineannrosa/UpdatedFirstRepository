@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Own Sample of Objects</title>
+</head>
+<body>
+    <script>
+        
+        function car(make, model, year){
+            this.make = make;
+            this.model = model;
+            this.year = year;
+        }
+
+        function engine(horsepower, type){
+            this.horsepower = horsepower;
+            this.type = type;
+        }
+
+        const myCar = new car("Toyota", "Corolla", 2020);
+        const friendCar = new car("Honda", "Civic", 2018);
+        console.log("My Car:", myCar);
+        console.log("Friend's Car:", friendCar);
+        myCar.color = "Blue";
+        console.log("Updated My Car with color:", myCar);
+        delete friendCar.year;
+        console.log("Friend's Car after deleting year:", friendCar);
+        
+        const myEngine = new engine(132, "Gasoline");
+        const friendEngine = new engine(158, "Diesel");
+
+        myCar.engine = myEngine;
+        friendCar.engine = friendEngine;
+
+        console.log("My Car's Engine:", myCar.engine);
+        console.log("Friend's Car's Engine:", friendCar.engine);
+    </script>
+    
+</body>
+</html>
