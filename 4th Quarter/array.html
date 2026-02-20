@@ -6,6 +6,10 @@
     <title>Array Practice</title>
 </head>
 <body>
+    <p id="kpopGroups"></p>
+    <p id="types of meat"></p>
+    <p id="colors"></p>
+    <p id="copywithin"></p>
     <p id="demo1"></p>
     <p id="demo2"></p>
     <p id="demo3"></p>
@@ -16,23 +20,35 @@
     <p id="demo8"></p>
 
     <script>
-        // const fruits = ["blueberry", "strawberry", "cherry"];
-        // document.getElementById("demo1").innerHTML = fruits;
-        // fruits.pop(); // removes the last element
-        // document.getElementById("demo2").innerHTML = fruits;
-        // fruits.shift(); // removes the first element
-        // document.getElementById("demo3").innerHTML = fruits;
-        // fruits.push("mango");// adds an element to the end
-        // document.getElementById("demo4").innerHTML = fruits;
-        // fruits.unshift("kiwi");// adds an element to the beginning
-        // document.getElementById("demo5").innerHTML = fruits;
+         const kpopGroups = [];
+         kpopGroups [1] = "SVT";
+         kpopGroups [0] = "BLACKPINK";
+         kpopGroups [2] = "ENHYPEN";
+         document.getElementById("kpopGroups").innerHTML = kpopGroups[1];
+
+         const prices = {pork: 5.99, beef: 7.99, chicken: 4.99, fish: 6.99};
+         document.getElementById("types of meat").innerHTML = prices["beef"];
+
+         const colors = ["red", "green", "blue", "yellow", "purple"];
+         let size = colors.length;
+         document.getElementById("colors").innerHTML = size;
+
+         const foods = ["pizza", "burger", "pasta", "salad", "sushi"];
+         document.getElementById("copywithin").innerHTML = 
+         foods.copyWithin(2, 1);
 
 
+         const fruits = ["blueberry", "strawberry", "cherry"];
+         document.getElementById("demo1").innerHTML = fruits;
+         fruits.pop(); // removes the last element
+         document.getElementById("demo2").innerHTML = fruits;
+         fruits.shift(); // removes the first element
+         document.getElementById("demo3").innerHTML = fruits;
+         fruits.push("mango");// adds an element to the end
+         document.getElementById("demo4").innerHTML = fruits;
+         fruits.unshift("kiwi");// adds an element to the beginning
+         document.getElementById("demo5").innerHTML = fruits;
 
-        
-
-
-        
     </script>
 </body>
 </html>

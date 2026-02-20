@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="union"></p>
+
+    <script>
+        let fiction = new Set(["Ana", "ben", "Carl"]);
+        let science = new Set(["Ben", "Dana", "Carl"]);
+        
+        let union = fiction.union(science);
+        console.log([...union]);
+
+        let intersection = fiction.intersection(science);
+        console.log([...intersection]);
+
+        let difference = fiction.difference(science);
+        console.log([...difference]);
+    </script>
+</body>
+</html>

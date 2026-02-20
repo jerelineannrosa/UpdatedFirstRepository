@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <p id="demo"></p>
+    <script>
+        console.log("union")
+        const A = new Set(["a", "b", "c"]);
+        const B = new Set(["b", "c", "d"]);
+
+        const C = A.union(B);
+        console.log([...C]);
+
+        console.log("intersection")
+        const Dark = new Set(["john", "drake", "carlo"]);
+        const Tall = new Set(["drake", "reighn", "carlo"]);
+
+        const F = Dark.intersection(Tall);
+        console.log([...F]);
+ 
+        console.log("difference")
+        const White = new Set(["rabbit", "dog", "cat"]);
+        const Brown = new Set(["lion", "dog", "cat"]);
+
+        const I = White.difference(Brown);
+        console.log([...I]);
+
+        // console.log("symmetric difference")
+        // const X = new Set(["red", "blue", "green"]);
+        // const Y = new Set(["blue", "yellow", "green"]);
+
+        // const Z = X.symmetricDifference(Y);
+        // console.log([...Z]);
+
+        // console.log("subset")
+        // const Competence = new Set(["b", "c"]);
+        // const G11 = new Set(["b", "c", "k"]);
+
+        // const isSubset = Competence.isSubsetOf(G11);
+        // console.log(isSubset);
+
+        // console.log("superset")
+        // const G12 = new Set(["b", "c"]);
+        // const Competence2 = new Set(["b", "c", "k"]);
+
+        // const isSuperset = G12.isSupersetOf(Competence2);
+        // console.log(isSuperset);
+
+        // console.log("disjoint")
+        // const Set1 = new Set(["a", "b", "c"]);
+        // const Set2 = new Set(["b", "c", "f"]);
+
+        // const areDisjoint = Set1.isDisjointFrom(Set2);
+        // console.log(areDisjoint);
+    </script>
+</body>
+</html>

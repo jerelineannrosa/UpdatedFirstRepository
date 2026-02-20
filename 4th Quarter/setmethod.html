@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="foods"></p>
+
+    <script>
+        //sets
+        // const letters = new Set(["a", "b", "c","a"]);
+        // console.log(letters);
+        // document.getElementById("demo").innerHTML = letters;
+         
+        
+        // const fruits = new Set(["apple", "banana", "orange"]);
+        // let text = "";
+        // for (const x of fruits) {
+        //     text += x + "<br>";
+        // }
+        // document.getElementById("demo").innerHTML = text;
+
+
+        // const evenNumbers = new Set([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+        // let evenNumbersText = "";
+        // for (const x of evenNumbers) {
+        //     if (x % 2 === 0) {
+        //         evenNumbersText += x;
+        //     }
+        // }
+        // document.getElementById("demo").innerHTML += evenNumbersText;
+   
+        // has and add method
+        const fruitSalad  = new Set([1]);
+        fruitSalad.add("pineapple");
+        fruitSalad.add("apple");
+        fruitSalad.add("creamer");
+        answer = fruitSalad.has("tomato");
+        document.getElementById("demo").innerHTML =  "the answer is " + answer;
+        console.log(fruitSalad);
+        console.log(fruitSalad.size);
+        console.log(fruitSalad.has);
+        
+        //forEach method
+        // const foodsSet = new Set(["pizza", "burger", "pasta", "salad", "sushi"]);
+        // let foods = "";
+        //   foodsSet.forEach(function(value) {
+        //     foods += value + " ";
+        //   });
+        //   document.getElementById("foods").innerHTML = foods;
+
+        //iterations methods
+        // const letters = new Set(["a", "b", "c"]);
+        // const myIterator = letters.values();
+        // let text = "";
+        //  for(const entry of myIterator) {
+        //     text += entry + " ";
+        //  }
+        //  console.log(text);
+        //  document.getElementById("demo").innerHTML = text;
+
+        // const letters = new Set(["a", "b", "c"]);
+        // const myIterator = letters.keys();
+        // let text = "";
+        //  for(const entry of myIterator) {
+        //     text += entry + " ";
+        //  }
+        //  document.getElementById("demo").innerHTML = text;
+    </script>
+</body>
+</html>

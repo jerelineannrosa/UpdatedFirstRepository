@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const colors = ["purple", "pink", "blue", "beige"];
+        let result = colors.indexOf("pink");
+        console.log(result);
+
+        const colors2 = ["purple", "pink", "blue", "beige"];
+        let Check = colors2.includes("blue");
+        console.log(Check);
+
+        const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'];
+        let find = alphabet.find(myFunction);
+        function myFunction(value) {
+            return value == 'e';
+        }
+        console.log(find);
+
+        const numbers = [ 2, 4, 6, 7, 8, 10];
+        let findIndex = numbers.findIndex(myFunction2);
+        function myFunction2(value, index, array) {
+            return value == 6;
+        }  
+        console.log(findIndex);
+    </script>
+</body>
+</html>
